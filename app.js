@@ -6,8 +6,6 @@ app.use(cors());
 require("dotenv").config();
 var path = require('path');
 let ejs = require('ejs');
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose")
 const Women = require("./models/women.js").women;
 const Maid = require("./models/maids.js").maid;
@@ -26,10 +24,7 @@ app.use(express.static(path.join(__dirname, './Edit Profile')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-const {MONGO_URI,TOKEN_KEY,ADMIN_PASS } = process.env;
 const port = process.env.PORT || 8000;
-const auth = require("./config/auth");
 
 mongoose.connect("mongodb+srv://nitigya:nitigya%402001@cluster0.wdxmp.mongodb.net/WaysLady?retryWrites=true&w=majority", {
   useNewUrlParser: true,
@@ -220,26 +215,6 @@ app.post("/maids/login", async (req, res) => {
 
 app.get("/maids/:id", async(req, res) => {
   res.render("pmaid")
-})
-
-
-app.post("/admin/login", async(req,res) => {
-  try {
-    const { password } = req.body;
-
-    if(password===ADMIN_PASS) {
-      res.send("Admin Page");
-    } else {
-      res.send("Invalid Password");
-    }
-    
-  } catch (err) {
-    console.log(err);
-  }
-})
-
-app.get("/admin/profile", async(req, res) => {
-  
 })
 
 
