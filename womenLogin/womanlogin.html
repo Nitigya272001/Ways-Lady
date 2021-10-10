@@ -20,7 +20,7 @@
         identifierType: "phone_number_sms",
         apiKey: "2eb8d335-c63e-4c1c-ab3d-cc56a0d6c9d2",
         onSuccess: (payload) => {
-          fetch("http://localhost:8000/women/login/", {
+          fetch("https://ways-lady.herokuapp.com/women/login/", {
           method: "POST",
           headers: {
             "content-type": "application/json",
