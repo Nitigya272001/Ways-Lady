@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(15 13 13);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        #logo {
+            height: 55px;
+            margin: 8px 24px;
+        }
+
+        #logo img {
+            height: 50px;
+            margin: 6px 3px;
+            clip-path: circle(50% at 50% 51%);
+
+        }
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: rgb(255, 255, 255);
+            display: block;
+            padding: 3px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: rgb(59, 5, 3);
+            background-color: white;
+        }
+
+        .heading {
+            position: relative;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .span {
+            background-color: lavenderblush;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+
+        }
+
+        span:nth-child(even) {
+            background-color: blanchedalmond;
+        }
+
+        .num {
+            margin: auto;
+            color: red;
+        }
+
+        .span h3 {
+            margin-left: 10px;
+        }
+
+        .span p {
+            margin-left: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2rem;
+        }
+
+        #span3 {
+            background-color: blanchedalmond;
+        }
+
+        #span4 {
+            background-color: lavenderblush;
+        }
+
+        .btn {
+            display: inline;
+            background-image: linear-gradient(to right top, #40c6c9, #2e70c7, #20397c);
+            color:azure;
+            border: 0 black solid;
+            font-size: 1.1rem;
+            padding: 0.3rem 0.4rem;
+            align-items: flex-end;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            
+        }
+
+ 
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo1.jpg">
+        </div>
+        <ul>
+            <li class="item"><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li class="item"><a href="#About">LogOut</a></li>
+        </ul>
+    </nav>
+    <div class="heading">
+        <h1> <b>|NGO's for Women|</b> </h1>
+    </div>
+    <div class="container">
+        <span class="span" id="span1">
+            <h3>Guria India <div class="num">+91 11 406405405</div>
+            </h3>
+            <p class="hide">Guria India’s approach is to focus on rescue and legal intervention. Due to the stigma
+                surrounding sexual assault, it helps the victim with all the necessities to fight their case starting
+                from filing an FIR to helping them collect evidence. </p>
+            <div> <button class="btn"> <a
+                        href="https://www.giveindia.org/blog/threats-are-a-part-of-their-work-profile%e2%80%8a-%e2%80%8aat-guria/"
+                        target="_blank" style="text-decoration: none;"> Website </a></button></div>
+        </span>
+        <span class="span" id="span2">
+            <h3>ActionAid Associate <div class="num"> +91 11 40640500</div>
+            </h3>
+            <p class="hide"> They work for the rights of disadvantaged women and children ensuring that they have good
+                means of livelihood.There are 22 Gauravi centres across the country - 3 in Madhya Pradesh, 17 in Uttar
+                Pradesh and the most recent ones started in 2017 in Manipur and in Tuticorin. </p>
+            <div></div><button class="btn"> <a  
+                    href="https://www.actionaidindia.org/what-we-do/our-projects/?gclid=CjwKCAjwtfqKBhBoEiwAZuesiLWrDtCyChC_JdPirzv0VXRxOQeIQfBFoDQ-ueHbOfuYH7yF8Fpj_RoCyW4QAvD_BwE"
+                    target="_blank" style="text-decoration: none;" > Website</a> </button>
+    </div>
+    </span>
+    </div>
+    <div class="container">
+        <span class="span" id="span3">
+            <h3>Majlis Manch <div class="num">+91 22 26661252</div>
+            </h3>
+            <p class="hide">Through their program ‘Rahat’, Majlis Manch’s legal center provides socio-legal support to
+                victims of sexual abuse. The all-women team of lawyers and social workers meet with victims and explain
+                the process and procedures involved in a court case. </p>
+            <div><button class="btn"> <a href="https://majlislaw.com/" target="_blank" style="text-decoration: none;"> Website</a> </button></div>
+        </span>
+        <span class="span" id="span4">
+            <h3>ARMMAN <div class="num"> 1-800-212-1425</div>
+            </h3>
+            <p class="hide"> ARMMAN, a Mumbai-based NGO has launched a pan-India free virtual OPD system for pregnant
+                women and children this week with the help of volunteer doctors. They already have 50 obstetricians as a
+                part of the virtual OPD and an equal number of paediatricians. </p>
+            <div><button class="btn"> <a href="https://armman.org/" target="_blank" style="text-decoration: none;">Website</a> </button></div>
+
+        </span>
+    </div>
+    <div class="container">
+        <span class="span" id="span5">
+            <h3>Care India <div class="num">011 - 69200000</div>
+            </h3>
+            <p class="hide">CARE focuses on developing the potential of marginalised women and girls to drive equitable changes through programmes which deliver quality healthcare, inclusive education, gender equitable and sustainable livelihood opportunities and disaster relief and preparedness.  </p>
+            <div><button class="btn"> <a href="https://www.careindia.org/" target="_blank" style="text-decoration: none;"> Website</a> </button></div>
+        </span>
+        <span class="span" id="span6">
+            <h3>Who's Who <div class="num">  011 - 26942369</div>
+            </h3>
+            <p class="hide"> To strive towards enabling women to achieve equality and equal participation in all spheres of life by securing her due rights and entitlements through suitable policy formulation,  atrocities against women. The Indian Woman, secure in her home and outside, with opportunity to contribute equally in all walks of life. </p>
+            <div><button class="btn"> <a href="http://ncw.nic.in/the-commission/who-s-who" target="_blank" style="text-decoration: none;">Website</a> </button></div>
+
+        </span>
+    </div>
+</body>
+
+</html>

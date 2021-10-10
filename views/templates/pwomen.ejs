@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your profile</title>
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(15 13 13);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        #logo {
+            height: 55px;
+            margin: 8px 24px;
+        }
+
+        #logo img {
+            height: 50px;
+            margin: 6px 3px;
+            clip-path: circle(50% at 50% 51%);
+
+        }
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: rgb(255, 255, 255);
+            display: block;
+            padding: 3px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: rgb(59, 5, 3);
+            background-color: white;
+        }
+        .section1::before {
+            content: "";
+            position: absolute;
+            background: url("../../public/bg1.jpg") no-repeat center center/cover;
+            height: 360px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.60;
+        }
+        .section1 {
+            background-color: rgb(212 211 211 / 32%);
+            margin: 5px;
+            padding: 10px;
+        }
+
+        #headimg {
+            width: 90px;
+            clip-path: circle(50% at 50% 51%);
+            margin-left: 43%;
+            margin-right: 40%;
+
+        }
+
+        .wrapper {
+  height: 10vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 30ch;
+  animation: typing 2s steps(22), blink .5s  infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  color: #da2ab9;
+  font-weight: bold;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+        #intro-text {
+            font-size: 1.4rem;
+            text-align: center;
+            padding: 0px 30px;
+            margin: 5px 15px;
+            font-family: 'Ubuntu', sans-serif;
+            color: rgb(7, 7, 7);
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            margin-top: 28px;
+
+        }
+
+        .box {
+            width: 400px;
+            height: 100px;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            margin-left: 5px;
+        }
+
+        .container h4 {
+            text-align: center;
+            box-sizing: border-box;
+            margin: 0%;
+            font-family: monospace;
+        }
+
+        .material {
+            border: 2px solid rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: .20rem;
+            flex-basis: 120px;
+            height: 280px;
+        }
+
+        .divspan {
+            font-size: 1.2rem;
+            line-height: 20%;
+            color: rgb(2, 156, 36);
+            
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .divbutton {
+            display: flex;
+            margin-top: 10px;
+            align-items: center;
+            background-color: #0030ff;
+            border: none;
+            text-align: center;
+            padding-left: 26px;
+            border-radius: .3rem;
+            font-weight: 500;
+            font-size: 10px;
+            width: 100%;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+        #button3 {
+            background-color: rgb(57, 216, 42);
+            border: none;
+            width: 100px;
+            border-radius: .25rem;
+            text-align: center;
+            padding: 4px;
+            box-sizing: border-box;
+            font-size: 13px;
+            margin: 5px 2px;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        #button3 a:hover{
+            color: azure;
+        }
+   
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://i.pinimg.com/564x/61/cb/e1/61cbe1e96e7e134ba9e19aad05dba9bc.jpg">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#About">LogOut</a></li>
+            <li class="item"><a href="http://localhost:8000/women/<%=_id%>/edit">Edit Profile</a></li>
+        </ul>
+    </nav>
+    <section class="section1">
+        <img id="headimg" src="https://i.pinimg.com/564x/61/cb/e1/61cbe1e96e7e134ba9e19aad05dba9bc.jpg" alt="">
+        <div class="wrapper">
+            <div class="typing-demo">
+              WaysLady Welcome You <%= name %> !&#128516
+            </div>
+        </div>
+        <p id="intro-text"> <br> <br> A platform which provides you mental and physical support anytime, anywhere. <br>
+           Interact with people of your interests, keep check on your health records and get services at your door.</p>
+        
+    </section>
+    <section>
+        <div class="container">
+            <div class="material" style="text-align: center;">
+                <button id="button3"><a href="#" style="text-decoration: none;">Click Here</a></button>
+                <h3>Malnutrition Checker</h3>
+                <span class="divspan">
+                   It is a flask web app that takes the measurements of a child to check is the child is malnourished or not. Keep a check on your health.  <br> <br>
+                </span>
+            </div>
+            <div class="material" style="text-align: center;">
+                <button id="button3"><a href="http://localhost:8000/maids_babysitters" style="text-decoration: none;">Click Here</a></button>
+                <h3>Find Maids/Babysitters</h3>
+                <span class="divspan">
+                    Easily find verified maids and babysitters for you just by searching.
+
+                </span>
+            </div>
+            <div class="material" style="text-align: center;">
+                <button id="button3"><a href="http://localhost:8000/NGO" style="text-decoration: none;">Click Here</a></button>
+                <h3>NGO Helpline Numbers</h3>
+                <span class="divspan" >
+                    Provides helpline numbers of NGOs to which  pregnant ladies can contact when subjected to violence or forced
+                    abortion.
+                    
+                </span>
+                </div>
+                <div class="material" style="text-align: center;">
+                    <button id="button3"><a href="#" style="text-decoration: none;">Click Here</a></button>
+                    <h3>Home Delivery</h3>
+                    <span class="divspan">
+                        Provides home delivery feature in which women can  share the source and destination location and products will be delivered to your home
+ <br> <br>
+                    </span>
+                </div>
+                <div class="material" style="text-align: center;">
+                    <button id="button3"><a href="http://localhost:8000/Reading" style="text-decoration: none;" >Click Here</a></button>
+                    <h3>Reading Section</h3>
+                    <span class="divspan">
+                        Avoid any type of mental stress, anxiety or mood swings by spending maximum time with good books and magazines provided here. <br> <br>
+                    </span>
+                </div>
+                <div class="material" style="text-align: center;">
+                    <button id="button3"><a href="#" style="text-decoration: none;">Click Here</a></button>
+                    <h3>Chat Feature</h3>
+                    <span class="divspan">
+                        Chit Chat with the experienced person, interact women volunteers to keep yourself busy and make you joyous and entertained. <br> <br>
+                    </span>
+                </div>
+                </div>
+    </section>
+</body>
+</html>

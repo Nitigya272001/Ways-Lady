@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>PrePregnant Profile</title>
+</head>
+	<style>
+		h1 {
+            
+            align-items: center;
+			color: rgb(0, 0, 0);
+			font-weight: 500;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+        .hr{
+            border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 50px;
+        }
+		body {
+			padding: 15px;
+			margin: 0;
+			background: linear-gradient(45deg,rgb(149, 225, 255), #8efcb8);
+		}
+		form{
+			display: block;
+			width: 50%;
+			padding: 15px;
+			margin: 0 auto;
+			background-image: url("bg1.jpg");
+            background-repeat: no-repeat;
+			border-radius: 15px;
+			box-shadow: 0 0 7px 4px rgb(223, 158, 158);
+		}
+		input{
+			padding: 10px;
+			margin: 10px 0;
+			width: 100%;
+			border-radius: 1px;
+			border: 1px solid rgb(0, 0, 0);
+		}
+        textarea{
+            padding: 10px;
+			margin: 10px 0;
+			width: 100%;
+			border-radius: 1px;
+			border: 1px solid rgb(0, 0, 0);
+        }
+		button{
+			padding: 10px 20px;
+			border-radius: 10px;
+			background-color: skyblue;
+			color: white;
+			border: none;
+			font-size: 1rem;
+			display: block;
+			margin: 0 auto;
+		}
+		button:hover{
+			background-color: #80ffb0;
+            color:red
+		}
+		input:focus{
+            outline: none !important;
+			border: 1px solid skyblue;
+		    box-shadow: 0 0 10px #80ffb0;
+		}
+        label{
+            font-size: 15px;
+            color: whitesmoke;
+        }
+        p{
+            color: white;
+        }
+        h2{
+            color: tomato;
+        }
+select{
+    margin-top: 10px;
+    border-radius: 1px;
+			border: 1px solid rgb(0, 0, 0);
+}
+	</style>
+<body>
+	<h1 style="text-align:center;">Profile Form - Pre Pregnancy</h1>
+    <hr>
+	<form action='\blank'>
+        <h2>Hey Name!!</h2>
+		<label > <strong>How are you?</strong></label> <br>
+ 		<input type="text" name="greet"> <br>
+		<label><strong>Do you have any complications? (If yes then mention it)</strong></label> <br>
+	<select name="Gender">
+		<option value="Male" class="option">Yes</option>
+		<option value="Female" class="option">No</option>
+	</select>
+ 	<input type="text" name="lname"><br>
+	
+	<label for="pregnancy-month"><b>What's your month of pregnancy?</b></label> <br>
+		<input type="number" placeholder="Month" id="pregnancy-month" name="pregnancy-month" required>
+	<br>
+	<label for="email"><b>What Medicines are you taking? (List them below)</b></label> <br>
+    <textarea id="txta" placeholder="Enter Medicine list"  rows="4" cols="44" required></textarea>
+	<br>
+    <label><strong>Are you getting proper sleep?</strong></label> <br>
+    <select name="yes/no" style="margin-bottom: 10px;">
+		<option value="Male" class="option">Yes</option>
+		<option value="Female" class="option">No</option>
+	</select>
+    
+    <br>
+	
+	<label for="time-hours"><b>What's the duration of doing excercise/yoga</b></label> <br>
+    	<input type="number" placeholder="Time(In hrs)" id="time-hours" name="time-hours" required><br>
+        <label for="upload"><b>Upload your medical report</b></label>
+        <input style="border: none;" type="file" name="uplaod" id="upload" accept=".pdf,.doc,.txt" >
+	<p style="margin: 0" ><b> I assure that the report submitted by me is correct:</b> <input style="width: auto; padding: 0" type="checkbox" name="agree" required></p><br>
+		<button type="submit" value="submit">Submit</button>
+
+	</form>
+</body>
+</html>

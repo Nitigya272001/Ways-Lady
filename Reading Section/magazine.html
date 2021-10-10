@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazines</title>
+    <style>
+        * {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		font-family: "Lato", "Sans-Sarief", "Arial"
+	}
+
+	body {
+		background-color: #f9ffe5;
+	}
+
+	:root {
+		--navbar-height: 50px;
+	}
+
+	#navbar {
+		display: flex;
+		align-items: center;
+		position: sticky;
+		top: 0px;
+		z-index: 1;
+	}
+
+	#navbar::before {
+		content: "";
+		background-color: rgb(15 13 13);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		opacity: 0.8;
+	}
+
+	#logo {
+		height: 55px;
+		margin: 8px 24px;
+	}
+
+	#logo img {
+		height: 50px;
+		margin: 6px 3px;
+		clip-path: circle(50% at 50% 51%);
+
+	}
+
+	#navbar ul {
+		display: flex;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	#navbar ul li {
+		list-style: none;
+		font-size: 1.3rem;
+	}
+
+	#navbar ul li a {
+		color: rgb(255, 255, 255);
+		display: block;
+		padding: 3px 22px;
+		border-radius: 10px;
+		text-decoration: none;
+	}
+
+	#navbar ul li a:hover {
+		color: rgb(59, 5, 3);
+		background-color: white;
+	}
+    h1 {
+		font-size: 45px;
+		font-weight: bold;
+		padding-top: 5px;
+		text-align: center;
+		margin-top: 15px;
+		color: #000;
+		margin-bottom: 15px;
+		font-family: 'Balsamiq Sans', cursive;
+		text-shadow: 4px 4px 4px #aaa;
+		letter-spacing: 1px;
+		word-spacing: 4px;
+
+	}
+	.head2 {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-weight: 500;
+        font-size: 1.2rem;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		margin-left: 70px;
+		padding: 10px;
+	}
+    .t1 {
+		margin-left: 25px;
+		margin-top: 5px;
+		padding: auto;
+		border-spacing: 25px;
+	}
+	.i1 {
+		float: left;
+		margin-left: 30px;
+		margin-top: 0px;
+		border: 1px solid black;
+		border-width: 3px;
+		padding: 2px 2px;
+		height: 350px;
+		width: 250px;
+	}
+
+	.b1 {
+		margin-left: 150px;
+		font-size: 25px;
+		font-family: Inconsolata;
+		margin-top: 10px;
+
+
+	}
+
+	.s2 {
+		color: #330e0e;
+	}
+
+	.btn,
+	.addbtn {
+
+		font-weight: 300;
+		text-align: center;
+		vertical-align: middle;
+		font-size: 28px;
+		line-height: 1.5;
+		border: 1px solid transparent;
+		padding: 0.5px 10px;
+		border-radius: 30px;
+		letter-spacing: normal;
+		align-items: flex-start;
+		float: left;
+		margin-right: 50px;
+		transition: .7s;
+		border: 1px solid rgb(12, 226, 66);
+	}
+
+	.btn {
+		margin-top: 0px;
+		background-color: #ffffff;
+		color: rgb(15, 15, 15);
+		text-decoration: none;
+	}
+
+	.btn:active,
+	.btn:hover {
+		color: #000;
+		border-color: #d35400;
+		background-color: rgb(12, 226, 66);
+        color: honeydew;
+	}
+
+	.addbtn {
+		background-color: #81ecec;
+		border-color: #81ecec;
+		color: #000;
+		margin-top: 0px;
+	}
+
+	.addbtn:active,
+	.addbtn:hover {
+		background-color: #2980b9;
+		border-color: #2980b9;
+		color: #000;
+	}
+
+	span {
+		color: rgb(22, 0, 0);
+		font-size: 1.2rem;
+		font-size: 1.4rem;
+		text-align: center;
+
+	}
+
+	.foot  {
+		text-align: center;
+		margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+	}
+
+	.button2 {
+		position: relative;
+		align-items: center;
+		border-radius: 10px;
+		margin-left: 532px;
+		background-color: #ff7433;
+		border: 1px solid rgb(0, 0, 2);
+		color: #FFFFFF;
+		text-align: center;
+		padding: 20px;
+		width: 200px;
+		height: 60px;
+		transition: all 0.5s;
+		cursor: pointer;
+		margin: 5px 532px;
+
+	}
+
+	.button2 span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+		font-size: 1.3rem;
+
+	}
+
+	.button2 span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -20px;
+		transition: 0.5s;
+	}
+
+	.button2:hover span {
+		padding-right: 25px;
+	}
+
+	.button2:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+    .footer{
+        width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 2em;
+    }
+ 
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+		<div id="logo">
+			<img src="logo1.jpg">
+		</div>
+		<ul>
+			<li class="item"><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
+			<li class="item"><a href="#About">LogOut</a></li>
+			<li class="item" id="review"><a href="#About">Review a Magazine</a></li>
+		</ul>
+	</nav>
+    <h1> &#128214; Magazine Sections &#128214;</h1>
+    <div class="head2">
+		<h2>Trending Magazines</h2>
+	</div>
+    <table class="t1">
+		<tr>
+			<td><img src="mag 1.jpg" class="i1"></td>
+			<td>
+				<div class="b1">
+					<b>Name</b> : <span class="s2">Women's Health</span>
+					<br><br>
+					<b>Description</b> : <span class="s2">Women’s Health is your go-to destination for new workouts, legit nutrition advice, weight loss tips, the latest health news, healthy recipes, and more.</span>
+					<br><br>
+					<a href="https://www.womenshealthmag.com/" class="btn">Read Here</a>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><img src="mag2.jpg" class="i1"></td>
+			<td>
+				<div class="b1">
+					<b>Name</b> : <span class="s2">Love Happens Magazine</span>
+					<br><br>
+					<b>Description</b> : <span class="s2">Out of the minds behind the luxury home décor brand KOKET comes the timeless luxury lifestyle magazine, Love Happens. Offered online and through a biannual print edition, Lh celebrates all things beautiful and iconic, inspiring and empowering the world’s most discerning women along the way. </span>
+					<br><br>
+					<a href="https://www.lovehappensmag.com/blog/" class="btn">Read Here</a>
+				</div>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td><img src="mag3.jpg" class="i1"></td>
+			<td>
+				<div class="b1">
+					<b>Name</b> : <span class="s2">Real Simple</span>
+					<br><br>
+					<b>Description</b> : <span class="s2">Showcasing good-to-know information with inspiring ideas, this is the go-to site for those who are looking to make life easier. The magazine features articles and information related to homemaking, childcare, cooking, and emotional well-being.</span>
+					<br><br>
+					<a href="https://www.realsimple.com/" class="btn">Read Here</a>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><img src="mag4.jpg" class="i1"></td>
+			<td>
+				<div class="b1">
+					<b>Name</b> : <span class="s2">InStyle</span>
+					<br><br>
+					<b>Description</b> : <span class="s2">Ikigai gently unlocks simple secrets we can all use to live
+						long, meaningful, happy lives. Warm, patient, and kind, this book pulls you gently along your
+						own journey rather than pushing you from behind.InStyle is a monthly women's fashion magazine founded in 1994. It is published in the United States by Meredith Corporation.</span>
+					<br><br>
+					<a href="https://www.instyle.com/" class="btn">Read Here</a>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><img src="mag5.jpg" class="i1"></td>
+			<td>
+				<div class="b1">
+					<b>Name</b> : <span class="s2">Women’s Day</span>
+					<br><br>
+					<b>Description</b> : <span class="s2">There are more ways than ever for women to harness their passions and Woman’s Day is here to help. Whether you want inspiring stories of entrepreneurship or savvy DIY decorating tips, look to Woman’s Day first. </span>
+					<br><br>
+					<a href="https://www.womansday.com/" class="btn">Read Here</a>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="foot">
+		<span style="font-size: 25px;" class="footer" > <b> Want to explore more</b></span>
+	</div>
+	<button class="button2"><span><a href="https://openlibrary.org/" style="text-decoration: none;" target="_blank"><b>
+					CLICK HERE</b></a> </span></button>
+	<div>
+</body>
+</html>

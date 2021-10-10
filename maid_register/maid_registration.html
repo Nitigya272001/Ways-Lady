@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Maids/Babysitters</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<style>
+    
+.jumbotron{
+  background-color: #ccd0cc;
+  min-height:600px;
+  min-width:1000px;
+  display:block;
+  margin-left:70px;
+  margin:0 auto;
+  opacity:0.85;
+  margin-bottom:50px;
+  margin-top:90px;
+}
+body
+{
+  background-image:url("bg.jpg");
+  background-size:1500px 2160px;
+  background-repeat:no-repeat;
+}
+table,th,td{
+  border: 1px solid black;
+}
+.div1{
+  margin-top:50px;
+  display:flex;
+}
+div{
+  margin-top:19px;
+  margin-left:15px;
+  display:flex;
+}
+#f1{
+  margin-left:15px;
+}
+#final{
+  display:block;
+  margin:0 auto;
+ }
+#k{
+  padding:30px;
+  margin-top:50px;
+  margin-left:390px;
+  
+}
+#k2{
+  margin-left:15px;
+}
+.gender{
+  margin-left:30px;
+  margin-top:4px;
+  display:inline;
+}
+#gender1{
+  margin-left:25px;
+}
+#txta{
+  margin-left:15px;
+}
+.sing{
+  margin-left:5px;
+  margin-top:7px;
+  margin-right:9px;
+}
+.larg{
+  margin-top:7px;
+  margin-left:10px;
+  margin-right:9px;
+}
+.hob{
+  margin-top:16px;
+}
+.other{
+  margin-left:180px;
+  display:block;
+}
+#f2{
+  margin-left:10px;
+}
+#h123{
+  height:100px;
+  background-color:purple;
+}
+#seth1{
+  font-family:'emoji';
+  margin:0 auto;
+  margin-top:18px;
+}
+label
+{
+  font-size:20px;
+  font-weight:bold;
+  float:left;
+  width:150px;
+ }
+</style>  
+</head>
+
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+  <div id="final" class="container">
+ <div class="jumbotron">
+<h1 class="text-center" id="seth1"> Maids/Babysitters Registration Form </h1>
+<form method="POST" action="http://localhost:8000/maids/login">
+<div class="div1">
+  <label>First Name:</label>
+  <input name="fname" id="f1" type="text" placeholder="Enter your first name" required>
+</div>
+  <div >
+  <label>Last Name:</label>
+  <input name="lname" id="f1" type="text" placeholder="Enter your last name" required>
+</div>
+  <div >
+  <label>DOB:</label>
+  <input name="dob" id="f1" type="date" placeholder="Enter your birth date" required>
+</div>
+  <div >
+  <label>Emergency Contact:</label>
+  <input name="emob" id="f1" type="text" placeholder="Enter Emergency contact" >
+</div>
+  
+  <div >
+  <label>Contact:</label>
+  <input name="mobile" id="f1" type="text" placeholder="Enter Mobile Number"  maxlength="10" required>
+</div> 
+<div >
+    <label>Upload your Aadhaar Card:</label>
+    <input type="file" id="f1" name="upload" accept=".pdf,.doc"/>
+</div>
+  </div>
+   <div class="jumbotron">
+  <div>
+  <label>Address:</label>
+  <textarea name="address" id="txta" placeholder="Enter Adress"  rows="4" cols="50" required></textarea>
+</div>
+  <div>
+  <label>City:</label>
+  <input name="city" id="f1" type="text" required>
+</div>
+  <div>
+    <label>PIN Code:</label>
+    <input id="f1" type="text" maxlength="6" required>
+  </div>
+  
+  <div>
+    <label>State:</label>
+    <input name="state" id="f1" type="text" required>
+  </div>
+  <div>
+    <label class="hob">Interest of Work:</label>
+    <div>
+      <input type="radio" id="maid" name="work" value="Maid">
+      <label for="maid">Maid</label><br>
+      <input type="radio" id="babysitting" name="work" value="Baby Sitter">
+      <label for="babysitting">Baby Sitting</label><br>
+    </div>
+    <br/>
+  </div>
+  <div>
+ 
+  <div id="k">
+  <input type="Submit" class="btn btn-primary">
+  <input id="k2" type="Reset" class="btn btn-info">
+  </div>
+   </form>
+   </div>
+    </div>
+  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+
+  
+</body>
+</html>

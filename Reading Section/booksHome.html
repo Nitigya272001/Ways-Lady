@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books and Magazines</title>
+    <link rel="stylesheet" type="text/css" href="booksblog.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@600&family=Marck+Script&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Lato", "Sans-Sarief", "Arial"
+        }
+
+        body {
+            background-color: #def8ff;
+        }
+
+        :root {
+            --navbar-height: 50px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(15 13 13);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        #logo {
+            height: 55px;
+            margin: 8px 24px;
+        }
+
+        #logo img {
+            height: 50px;
+            margin: 6px 3px;
+            clip-path: circle(50% at 50% 51%);
+
+        }
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: rgb(255, 255, 255);
+            display: block;
+            padding: 3px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: rgb(59, 5, 3);
+            background-color: white;
+        }
+
+        #review {
+            float: right;
+            position: relative;
+            margin-left: auto;
+            display: block;
+            text-align: right;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            padding-top: 5px;
+            text-align: center;
+            margin-top: 15px;
+            color: #000;
+            margin-bottom: 5px;
+            font-family: 'Balsamiq Sans', cursive;
+            text-shadow: 4px 4px 4px #aaa;
+            letter-spacing: 1px;
+            word-spacing: 4px;
+
+        }
+
+        hr {
+            overflow: visible;
+            height: 30px;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px 0 0 0;
+            border-radius: 20px;
+            width: 25%;
+            margin: auto;
+        }
+
+        hr:before {
+            display: block;
+            content: "";
+            height: 30px;
+            margin-top: -31px;
+            border-style: solid;
+            border-color: black;
+            border-width: 0 0 1px 0;
+            border-radius: 20px;
+        }
+
+        .container {
+            display: flex;
+            margin: 40px 10px 80px 10px;
+            padding: 5px 10px;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: tomato;
+        }
+
+        .head {
+            font-size: 1.2rem;
+            font-family: cursive;
+            text-align: justify;
+        }
+
+        .img1 {
+            width: 280px;
+            height: 220px;
+            float: right;
+            margin-left: 8px;
+        }
+
+        #head2 {
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+
+        table {
+            position: relative;
+            margin: auto;
+            padding: 5px;
+            border-spacing: 80px 30px;
+        }
+     
+
+        .head3 {
+            color: black;
+            text-shadow: 2px 2px 2px rgb(131, 119, 119);
+            text-align: center;
+        }
+
+        .table-img {
+            width: 300px;
+
+        }
+
+        .table-img1 {
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo1.jpg">
+        </div>
+        <ul>
+            <li class="item"><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li class="item"><a href="#About">LogOut</a></li>
+            <li class="item" id="review"><a href="#About">Review a Book</a></li>
+        </ul>
+    </nav>
+    <h1>~Books & Magazines~</h1>
+    <br>
+    <hr>
+    <div class="container">
+        <div class="description">
+            <h2>Why Reading Books and Magazing <br> is Important duting Pregnancy?</h2>
+            <p class="head"> <img src="woman1.jpg" alt="" class="img1"> Reading is one of the most vital talents a child
+                needs in order to be successful in life. Books are one’s best friend and the early we inculcate this
+                habit, it is excellent for the child. Reading while pregnancy not only increases the knowledge but also
+                helps in making the bond between the mother and the baby stronger. It also triggers better
+                concentration, a good attention span, distressing the mother of her tensions, resulting in a smarter
+                baby.Many studies show that reading (particularly from the mother’s relaxing voice) causes a baby’s
+                fetal heart rate to drop. Also, the bond that is experienced between parent and child, later on, can
+                start to occur while Mama or Papa read to the baby prenatally. Participation in reading is also a great
+                way for other family members to connect with the baby. </p>
+        </div>
+
+    </div>
+    <h2 id="head2">
+        What you wanna read??
+    </h2>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <a href="http://localhost:8000/books" style="text-decoration: none;">
+                    <h2 class="head3">BOOKS</h2>
+
+                    <img src="book.jpg" alt="" class="table-img1">
+                </a>
+                </td>
+                <td>
+                    <a href="http://localhost:8000/magazine" style="text-decoration: none;">
+                    <h2 class="head3">MAGAZINES</h2>
+                    <img src="magazine.jpg" alt="" class="table-img">
+                </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

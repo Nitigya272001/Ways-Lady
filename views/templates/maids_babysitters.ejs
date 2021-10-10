@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maids and Babysitters</title>
+    </head>
+
+<body>
+    
+    <div>
+        <h2>Maids : </h2>
+    <input type="text" name="search" id="srchbx" placeholder="Search by city">
+    <input type="button" value="button" onclick="func1()">
+    <div id="resultMaid"></div>
+    </div>
+
+    <div>
+        <h2>Babysitters : </h2>
+    <input type="text" name="search" id="srchbx1" placeholder="Search by city">
+    <input type="button" value="submit" onclick="func2()">
+    <div id="resultBaby"></div>
+    </div>
+
+    
+    <script>
+        function func1() {
+            const city = document.getElementById('srchbx').value;
+            const box  = document.getElementById('resultMaid');
+            var res = `<h3>Search Results : </h3>`
+
+            for(var i = 0; i < maids.length; i++)
+                    {
+                        if(maids[i].city===city)
+                        {
+                            res = res + `<h4>${maids[i].fname} ${maids[i].lname}</h4>
+                            <h5>${maids[i].mobile}</h5>`
+                        }
+                    }
+
+            box.innerHTML = `${res}`;
+        }
+
+        function func1() {
+            const city = document.getElementById('srchbx1').value;
+            const box  = document.getElementById('resultBaby');
+            var res = `<h3>Search Results : </h3>`
+
+            for(var i = 0; i < babysitters.length; i++)
+                    {
+                        if(babysitters[i].city===city)
+                        {
+                            res = res + `<h4>${babysitters[i].fname} ${babysitters[i].lname}</h4>
+                            <h5>${babysitters[i].mobile}</h5>`
+                        }
+                    }
+
+            box.innerHTML = res;
+        }
+    </script>
+
+</body>
+
+</html>

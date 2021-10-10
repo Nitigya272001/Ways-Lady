@@ -1,0 +1,154 @@
+<html>
+
+<head>
+	<title>PostPregnant profile</title>
+</head>
+<style>
+	h1 {
+
+		align-items: center;
+		color: rgb(0, 0, 0);
+		font-weight: 600;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+
+	.hr {
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+		width: 50px;
+	}
+
+	body {
+		padding: 15px;
+		margin: 0;
+		background: linear-gradient(45deg, rgb(255, 174, 68), #5cff7f);
+	}
+
+	form {
+		display: block;
+		width: 50%;
+		padding: 15px;
+		margin: 0 auto; 
+		background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+		border-radius: 15px;
+		box-shadow: 0 0 7px 4px rgb(223, 158, 158);
+	}
+
+	input {
+		padding: 10px;
+		margin: 10px 0;
+		width: 100%;
+		border-radius: 1px;
+		border: 1px solid rgb(0, 0, 0);
+	}
+
+	textarea {
+		padding: 10px;
+		margin: 10px 0;
+		width: 100%;
+		border-radius: 1px;
+		border: 1px solid rgb(0, 0, 0);
+	}
+
+	button {
+		padding: 10px 20px;
+		border-radius: 10px;
+		background-color: rgb(87, 75, 255);
+		color: white;
+		border: none;
+		font-size: 1rem;
+		display: block;
+		margin: 0 auto;
+	}
+
+	button:hover {
+		background-color: #ff8398;
+		color: rgb(0, 0, 0)
+	}
+
+	input:focus {
+		outline: none !important;
+		border: 1px solid skyblue;
+		box-shadow: 0 0 10px #80ffb0;
+	}
+
+	label {
+		font-size: 15px;
+		color: rgb(0, 0, 0);
+	}
+
+	p {
+		color: rgb(5, 0, 0);
+	}
+
+	h2 {
+		color: tomato;
+	}
+
+	select {
+		margin-top: 10px;
+		border-radius: 1px;
+		border: 1px solid rgb(0, 0, 0);
+	}
+</style>
+
+<body>
+	<h1 style="text-align:center;">Profile Form - Post Pregnancy</h1>
+	<hr>
+	<form action='\blank' style="background-image: url('https://images.unsplash.com/photo-1559659133-8781d8f3b673?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80 ');">
+		<h2>Hey Name!!</h2>
+		<label> <strong>How's you and your baby?</strong></label> <br>
+		<input type="text" name="greet"> <br>
+		<label><strong>Deos your baby or you have any health isuues? (If yes then mention it)</strong></label> <br>
+		<select name="yes/no">
+			<option value="Yes" class="option">Yes</option>
+			<option value="No" class="option">No</option>
+		</select>
+		<input type="text" name="lname"><br>
+
+		<label for="pregnancy-month"><b>What you named your baby child?
+				&#128519;</b></label> <br>
+		<input type="text" placeholder="Name" id="pregnancy-month" name="pregnancy-month" required>
+		<br>
+		<label for="pregnancy-month"><b>What is your child's age?
+				&#128519;</b></label> <br>
+		<input type="number" placeholder="In months" id="pregnancy-month" name="pregnancy-month" required> <br>
+		<label><strong>Do you vaccinate your baby properly?</strong></label> <br>
+		<select name="yes/no">
+			<option value="Yes" class="option">Yes</option>
+			<option value="No" class="option">No</option>
+		</select>
+		<label for="vaccination"><b>Give out all the names of vaccination your baby had till now?</b></label> <br>
+		<textarea id="txta" placeholder="vaccination names" rows="4" cols="44" required></textarea>
+		<br>
+		<label><strong>Is your baby taking milk/food properly?</strong></label> <br>
+		<select name="yes/no" style="margin-bottom: 10px;">
+			<option value="Yes" class="option">Yes</option>
+			<option value="No" class="option">No</option>
+		</select>
+
+		<br>
+		<label><strong>Does your baby have proper sleep cycle?</strong></label> <br>
+		<select name="yes/no" style="margin-bottom: 10px;">
+			<option value="Yes" class="option">Yes</option>
+			<option value="No" class="option">No</option>
+		</select>
+		<br>
+		<label for="time-hours"><b>What's the duration of doing excercise/yoga</b></label> <br>
+		<input type="number" placeholder="Time(In hrs)" id="time-hours" name="time-hours" required><br>
+		<label for="upload"><b>Upload your medical report</b></label>
+		<input style="border: none;" type="file" name="uplaod" id="upload" accept=".pdf,.doc,.txt"> <br>
+		<label for="upload"><b>Upload your baby's medical report</b></label>
+		<input style="border: none;" type="file" name="uplaod" id="upload" accept=".pdf,.doc,.txt"> <br>
+		<p style="margin: 0"><b> I assure that the report submitted by me is correct:</b> <input
+				style="width: auto; padding: 0" type="checkbox" name="agree" required></p><br>
+		<button type="submit" value="submit">Submit</button>
+
+	</form>
+</body>
+
+</html>

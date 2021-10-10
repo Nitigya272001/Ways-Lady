@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(211, 211, 211);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        #logo {
+            height: 55px;
+            margin: 8px 24px;
+        }
+
+        #logo img {
+            height: 50px;
+            margin: 6px 3px;
+            clip-path: circle(50% at 50% 51%);
+
+        }
+
+        .homeicon {
+            height: 45px;
+            margin: 6px 24px;
+        }
+
+        .homeicon img {
+            height: 40px;
+            margin: 6px 3px;
+            clip-path: circle(50% at 50% 51%);
+        }
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.5rem;
+        }
+
+        #navbar ul li a {
+            color: rgb(27, 26, 26);
+            display: inline-block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+
+        .column {
+            float: left;
+            padding: 10px;
+            height: 300px;
+            color: #ffe5e5;
+        }
+
+        .left {
+            width: 65%;
+
+        }
+        .left3 {
+            width: 65%;
+height: 410px;
+        }
+
+        .right {
+            width: 35%;
+            
+            border: 1px solid black;
+        
+        }
+        .right3 {
+            width: 35%;
+            height: 410px;
+            border: 1px solid black;
+        }
+
+        #woman1 {
+            position: relative;
+            width: 430.2px;
+            height: 280px;
+            align-items: center;
+            margin: auto;
+
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .row1 p {
+            font-size: 1.2rem;
+            color: #32a028;
+        }
+
+        .row1 h2 {
+            color: #ee497d;
+        }
+
+        .btn1 {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #btn1 {
+
+            background-color: #ee497d;
+            border: none;
+            font-size: 15px;
+            width: 100px;
+            border-radius: .3rem;
+            text-align: center;
+            padding: 4px;
+            box-sizing: border-box;
+            margin: 5px 2px;
+            color: azure;
+
+        }
+
+        .row2 h2 {
+            color: #070204;
+        }
+
+        .row2 p {
+            font-size: 1.2rem;
+            color: #ff2171;
+        }
+        .row3 h2 {
+            color: #9528a8;
+        }
+
+        .row3 p {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+
+        #maid {
+            position: relative;
+            width: 400.2px;
+            height: 280px;
+            align-items: center;
+            margin: auto;
+        }
+        #volunteer{
+            position: relative;
+            width: 380.2px;
+            height: 400px;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo1.jpg">
+        </div>
+
+        <ul>
+            <li class="item"><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="row1">
+            <div class="column left" style="background-color:rgb(253, 194, 250);">
+                <h2
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Register yourself as Woman</h2>
+                <p style="font-family: 'Times New Roman', Times, serif;">Getting good care before, during, and after
+                    your pregnancy is very important. It can help your baby
+                    grow and develop and keep you both healthy. It is the best way to be sure your little one gets a
+                    head start on a healthy life. Join our platform which provide you the best possible care which might
+                    be beneficial fot you as well as for your baby. Get help with doctors sitting home. Get your goods
+                    and services delivered home. Get all your work done by the maid provided to you at lowest price.
+                    Hire Baby Sitters all verified and of your choice. Stay Healthy, Stay Motivated with WayLady.. </p>
+                <div class="btn1"><button id="btn1">Register here</button></div>
+            </div>
+            <div class="column right" style=" background-color:rgb(253, 194, 250);">
+                <img src="woman1.jpg" alt="" id="woman1">
+            </div>
+        </div>
+
+    </section>
+    <br> <br> <br> <br>
+    <section>
+        <div class="row2">
+            <div class="column left" style="background-color: rgb(255 228 240);">
+                <h2
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Register yourself as Maid</h2>
+                <p style="font-family: 'Times New Roman', Times, serif;">As we know job of maid is not that easy, and
+                    what is difficult than that is finding a proper job with security. Thus this platform solve your
+                    problems. Get employed by just registering yourself here. We will reach you provide you the jobs and
+                    will clear out all your doubts. So now be Independent and Passionate with your life. </p>
+                <br><br><br>
+                <div class="btn1"><button id="btn1">Register here</button></div>
+            </div>
+            <div class="column right" style="background-color:rgb(255, 255, 255);">
+                <img src="maid.png" alt="" id="maid">
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="row3">
+            <div class="column left3" style="background-color: hsl(246deg 96% 89%)">
+                <h2
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Register yourself as Volunteer</h2>
+                <p style="font-family: 'Times New Roman', Times, serif;">The benefits of volunteering can be enormous. Volunteering offers vital help to
+                    people in need, worthwhile causes, and the community, but the benefits can be even greater for you,
+                    the volunteer. The right match can help you to find friends, connect with the community, learn new
+                    skills, and even advance your career.Giving to others can also help protect your mental and physical health. It can reduce stress, combat
+                    depression, keep you mentally stimulated, and provide a sense of purpose. While it’s true that the
+                    more you volunteer, the more benefits you’ll experience, volunteering doesn’t have to involve a
+                    long-term commitment or take a huge amount of time out of your busy day. Giving in even simple ways
+                    can help those in need and improve your health and happiness. Thus interested one can connect with us provide their valuable time to provide help to the needy. They get employed along with that they improve their state of well being. </p>
+                <div class="btn1"><button id="btn1">Register here</button></div>
+            </div>
+            <div class="column right3" style="background-color:rgb(255, 255, 255);">
+                <img src="volunteer.jpg" alt="" id="volunteer">
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ways Lasy-Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(211, 211, 211);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        #logo {
+            height: 55px;
+            margin: 8px 24px;
+        }
+
+        #logo img {
+            height: 50px;
+            margin: 6px 3px;
+            clip-path: circle(50% at 50% 51%);
+
+        }
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: rgb(27, 26, 26);
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: rgb(111, 138, 121);
+            background-color: white;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 450px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            background: url('home bg 2.jpeg') no-repeat center center/cover;
+            height: 400px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.75;
+        }
+
+        #home h1 {
+            color: rgb(226, 228, 220);
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 2px 2px 5px rgb(161, 27, 202);
+            font-size: 45px;
+
+
+        }
+
+        #home p {
+            color: rgb(21, 44, 248);
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .about {
+            padding-left: 80px;
+            padding-top: 0px;
+            padding-right: 80px;
+            padding-bottom: 80px;
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+        }
+
+        .about__text {
+            height: 100%;
+            width: 70%;
+            background-color: #fff;
+        }
+
+
+
+        .about__text--group:not(:last-child) {
+            margin: 2rem 0;
+        }
+
+        .about__graphic {
+            height: 100%;
+            width: 50%;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: .5rem;
+            background-color: #f4f6ff;
+        }
+
+        .about__graphic--item1 {
+            grid-row: 1/span 2;
+            grid-column: 1/3;
+        }
+
+        .about__graphic--item2 {
+            grid-row: 2 / -1;
+            grid-column: 5 / -1;
+        }
+
+        .about__graphic--item3 {
+            grid-row: 3/-1;
+            grid-column: 1 / span 2;
+        }
+
+        .about__graphic--item5 {
+            grid-row: 1 / 2;
+            grid-column: 4 / -1;
+        }
+
+        .about__graphic--item6 {
+            grid-row: 2 / -1;
+            grid-column: 3 / 5;
+        }
+
+        .about__graphic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .heading--1 {
+            font-family: 'Nunito',
+                sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background-image: linear-gradient(to right top, #05d5d9, #6517cb, #cb218d);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 2.5rem;
+            letter-spacing: 2px;
+
+        }
+
+        .heading--2 {
+            margin-bottom: .6rem;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .text {
+            font-size: 1.2rem;
+            width: 90%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .cta {
+            height: 80vh;
+            background-image: linear-gradient(to left top, rgba(5, 213, 217, 0.767), rgba(125, 216, 83, 0.7), rgba(186, 203, 33, 0.7));
+            background-size: cover;
+            padding: 8rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cta__graphic {
+            width: 50%;
+            margin-right: 3rem;
+            align-self: center;
+        }
+
+        .cta__graphic img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            width: 95%;
+            float: right;
+        }
+
+        .cta__text {
+            padding: 3rem;
+            width: 40%;
+        }
+
+        .cta__text .heading--1 {
+            color: #fff;
+            background-image: none;
+        }
+
+        .cta__text .heading--2 {
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            color: #222222;
+        }
+
+        .cta__text .btn {
+            text-decoration: none;
+            background-color: hotpink;
+            border: black;
+            width: 150px;
+            height: 50px;
+            border-radius: .25rem;
+            text-align: center;
+            padding: 4px;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 5px 2px;
+
+        }
+
+        .cta__text .btn_url {
+            text-decoration: none;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .cta__text .btn_url:hover {
+            color: #fff;
+        }
+
+        .fade {
+            opacity: 0;
+        }
+        footer {
+    background-color: rgb(56, 48, 48);
+    overflow: hidden;
+}
+footer a{
+    text-decoration: none;
+    padding: 20px;
+    float: left;
+    color: azure;
+    font-size: 15px;
+    text-align: center;
+}
+footer div{
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    float: left;
+    color: azure;
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+}
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo1.jpg">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#About">About</a></li>
+            <li class="item"><a href="#register">SignUp/LogIn</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">WAYS LADY</h1>
+        <p>Finally Making Women <br>More Independent, More PowerFul, <br>More Passionate, More Joyous</p>
+    </section>
+    <section class="about" id="about">
+        <div class="about__text" id="About">
+            <h1 class="heading--1">About Us</h1>
+
+            <div class="about__text--group">
+                <p class="text">WaysLady is a platform where omen’s physical and mental safety is ensured. It is a
+                    community of women,
+                    doctors, NGO workers, and psychologists where ladies are protected from all kinds of physical and
+                    mental traumas.
+                    Today, when we talk about women's safety, it is not only restricted to the safety of women walking
+                    on a street but also
+                    the violence and abuse they have been subjected to in their own house. This proves to be dangerous
+                    especially for pregnant
+                    women who are pressurized for forceful abortion or are subjected to abuse. This platform is
+                    specifically designed for pregnant
+                    women to help them resolve their problems that could prove insidious to the child and to get
+                    detailed information about
+                    pregnancy. </p>
+            </div>
+            <div class="about__text--group">
+                <p class="text">Besides providing physical and mental safety to ladies, the site is quite informative
+                    about everything
+                    related to pregnancy and about what women like to read or perform during this tenure. Different
+                    magazine links are provided for
+                    the same. Do you know what is special about this? Users can also add the magazines they like to
+                    read. Uploading of any content
+                    or registration of users into the site or allowing NGO helpers, doctors, psychologists to assist the
+                    users, the admin will keep
+                    a check on all these. After the admin will verify, then only users can upload anything on the site.
+
+                    Admin will keep a check
+                    on everyone to ensure security.
+                    <br><br>
+                </p>
+
+            </div>
+            <br><br>
+        </div>
+
+        <div class="about__graphic">
+            <div class="about__graphic--item about__graphic--item1"><img alt="" src="about1.jpg">
+            </div>
+            <div class="about__graphic--item about__graphic--item2"><img alt="" src="about2.jpg">
+            </div>
+            <div class="about__graphic--item about__graphic--item3"><img alt="" src="about3.jpg">
+            </div>
+            <div class="about__graphic--item about__graphic--item4"><img alt="" src="about4.jpg">
+            </div>
+            <div class="about__graphic--item about__graphic--item5"><img alt="" src="about5.jpg">
+            </div>
+            <div class="about__graphic--item about__graphic--item6"><img alt="" src="about6.jpg">
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+
+        <div class="about__text">
+            <h1 class="heading--1">How it works</h1>
+
+            <div class="about__text--group">
+                <p class="text">
+                    Along with physical safety, ensuring the mental safety of a pregnant woman is equally important. In
+                    the website, there are all
+                    sorts of assistance provided to solve even the smallest doubt related to pregnancy. One can easily
+                    ask queries from doctors
+                    regarding the problems they may have been facing or can ask for tips to ensure the health of both
+                    mother and child. One cannot
+                    always meet doctors to discuss any small abnormality or share their emotions about how they are
+                    feeling, here women can chat
+                    with doctors as well as from experienced women to lighten their mood and share their experiences and
+                    emotions. To help women to face health related complications by providing them verified maids and
+                    baby sitters. Hiring interested people to volunteer like for delivering essential commodities. Hence
+                    solving problem of employement. In a lively and healthy
+                    environment, mental peace will be established.
+                </p>
+            </div>
+            <div class="about__text--group">
+                <p class="text"> WayLady serves as a platform where females can come together and find other females
+                    with similar interests in life.
+                    This will not only help them to be mentally and physically fit, but will also help them meet
+                    different
+                    women and empower each other.
+                </p>
+
+            </div>
+
+
+        </div>
+
+        <div class="about__graphic">
+            <div class="about__graphic--item about__graphic--item1"><img alt="" src="hiw1.jpeg">
+            </div>
+            <div class="about__graphic--item about__graphic--item2"><img alt="" src="hiw2.jpeg">
+            </div>
+            <div class="about__graphic--item about__graphic--item3"><img alt="" src="hiw3.jpeg">
+            </div>
+            <div class="about__graphic--item about__graphic--item4"><img alt="" src="hiw4.jpeg">
+            </div>
+            <div class="about__graphic--item about__graphic--item5"><img alt="" src="hiw5.jpeg">
+            </div>
+            <div class="about__graphic--item about__graphic--item6"><img alt="" src="hiw6.jpeg">
+            </div>
+        </div>
+
+    </section>
+    <section class="cta">
+        <div class="cta__graphic">
+            <img src="herobg.png" alt="girl jumping">
+        </div>
+        <div class="cta__text">
+            <h1 class="heading--1">One step for safety and health .</h1>
+            <div class="heading--2" id="register">Register Yourself Today</div>
+            <button class="btn"><a href="http://localhost:8000/login" class="btn_url">Get started for free</a></button>
+        </div>
+
+    </section>
+    <footer>
+    <a href="#">FAQ</a>
+    <a href="#">Contact Us</a>
+    <div><span> &copy; Copyright 2021 WaysLady. All rights reserved </span></div>
+</footer>
+    
+</body>
+
+</html>
